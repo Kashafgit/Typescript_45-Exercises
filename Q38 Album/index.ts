@@ -15,14 +15,9 @@
 
 
 function make_album(artist_name: string, album_title: string, tracks? : number){
-    let album: {
-        artist: string, title: string, tracks? : number
-    }={
-        artist: artist_name,
-        title: album_title,
-    };
-    if(tracks !== undefined){
-        album.tracks = tracks;
+    let album = {artist_name, album_title}
+    if(tracks){
+        album["tracks"] = tracks
     }
     return album;
 }
